@@ -1,0 +1,32 @@
+RepoGuard v1.0.0 — local audit
+Generated: 2026-10-17T11:35:01Z
+Verdict: SECRETS_FOUND
+Scanner: native
+Scope: Locally reachable commit diffs and refs; no network, no working-tree/index scan
+Secret values: omitted
+
+Exposures: 0 | Secret findings: 6 | Coverage/review warnings: 0
+Configuration history: 3 | Unmerged refs: 1
+
+[INFO] authors / AUTHOR_DOMAIN  internal.example    Observed author email domain; internal/public status not inferred
+[INFO] branches / UNMERGED_REF  refs/heads/feature/unmerged    Not fully reachable from comparison base; may be stale cached remote ref
+[WARN] history / SECRET  .env  credential-assignment  Value omitted; review locally
+    Commit: a9a80bc6b036e5f93614cad130d0cb26708fc40a  Line: 1  Scanner: native
+[WARN] history / SECRET  .env  credential-assignment  Value omitted; review locally
+    Commit: b0a4df8d6a7771b347d8dc2029b7776e394119c4  Line: 1  Scanner: native
+[WARN] history / SECRET  .env  database-credential-uri  Value omitted; review locally
+    Commit: a9a80bc6b036e5f93614cad130d0cb26708fc40a  Line: 2  Scanner: native
+[WARN] history / SECRET  .env  database-credential-uri  Value omitted; review locally
+    Commit: b0a4df8d6a7771b347d8dc2029b7776e394119c4  Line: 2  Scanner: native
+[INFO] history / CONFIG_HISTORY  .env  env-file-history  Value omitted; review locally
+    Commit: a9a80bc6b036e5f93614cad130d0cb26708fc40a  Line: 0  Scanner: native
+[INFO] history / CONFIG_HISTORY  .env  env-file-history  Value omitted; review locally
+    Commit: b0a4df8d6a7771b347d8dc2029b7776e394119c4  Line: 0  Scanner: native
+[WARN] history / SECRET  id_key  private-key  Value omitted; review locally
+    Commit: a9a80bc6b036e5f93614cad130d0cb26708fc40a  Line: 1  Scanner: native
+[WARN] history / SECRET  id_key  private-key  Value omitted; review locally
+    Commit: b0a4df8d6a7771b347d8dc2029b7776e394119c4  Line: 1  Scanner: native
+[INFO] history / CONFIG_HISTORY  staging.yaml  staging-config-history  Value omitted; review locally
+    Commit: b0a4df8d6a7771b347d8dc2029b7776e394119c4  Line: 0  Scanner: native
+[INFO] local_coverage / COVERAGE      4 reachable commit(s); all local refs, including locally cached remote refs. Reflog-only and unreachable objects excluded.
+[INFO] local_coverage / LIMITED_SCANNER      Native heuristic scanner selected; no exhaustive secret-detection guarantee

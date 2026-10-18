@@ -1,0 +1,99 @@
+PASS exit 1
+PASS valid JSON/text 1
+PASS clean native history
+PASS exit 2
+PASS valid JSON/text 2
+PASS removed secrets found
+PASS private key marker
+PASS database credential URI
+PASS OAuth secret
+PASS env history
+PASS staging history
+PASS author domain
+PASS unmerged feature branch
+PASS redaction
+PASS no remote calls locally
+PASS no repository edits
+PASS secret verdict is yellow-class
+PASS exit 3
+PASS valid JSON/text 3
+PASS exit 4
+PASS exit 5
+PASS valid JSON/text 5
+PASS gitleaks integration
+PASS gitleaks field redaction
+PASS exit 6
+PASS valid JSON/text 6
+PASS gitleaks error not clean
+PASS native fallback retained
+PASS exit 7
+PASS valid JSON/text 7
+PASS empty repo
+PASS exit 8
+PASS valid JSON/text 8
+PASS bare repo
+PASS exit 9
+PASS valid JSON/text 9
+PASS shallow coverage warning
+PASS exit 10
+PASS valid JSON/text 10
+PASS untracked excluded
+PASS exit 11
+PASS valid JSON/text 11
+PASS three verified VCS exposures
+PASS gitignore not an exposed git proof
+PASS config values never exported
+PASS HEAD requests performed
+PASS no objects or pack fetches
+PASS exit 12
+PASS valid JSON/text 12
+PASS no false exposure waf
+PASS exit 13
+PASS valid JSON/text 13
+PASS no false exposure catchall
+PASS exit 14
+PASS valid JSON/text 14
+PASS no false exposure denied
+PASS exit 15
+PASS valid JSON/text 15
+PASS no false exposure missing
+PASS exit 16
+PASS valid JSON/text 16
+PASS verify detached
+PASS exit 17
+PASS valid JSON/text 17
+PASS verify head405
+PASS exit 18
+PASS valid JSON/text 18
+PASS verify legacy
+PASS exit 19
+PASS valid JSON/text 19
+PASS redirect inconclusive
+PASS exit 20
+PASS valid JSON/text 20
+PASS bounded body inconclusive
+PASS exit 21
+PASS valid JSON/text 21
+PASS list deduplicated
+PASS parallel results retained
+PASS exit 22
+PASS valid JSON/text 22
+PASS exit 23
+PASS valid JSON/text 23
+PASS connection failure not clean
+PASS exit 24
+PASS exit 25
+PASS exit 26
+PASS exit 27
+PASS exit 28
+PASS exit 29
+PASS exit 30
+PASS exit 31
+PASS exit 32
+PASS exit 33
+PASS exit 34
+PASS valid JSON/text 34
+PASS real Gitleaks completed
+PASS real Gitleaks detected fixture
+
+PASS 97 / FAIL 0

@@ -1,0 +1,66 @@
+{
+  "tool": "RepoGuard",
+  "version": "1.0.0",
+  "generated_at": "2026-10-17T11:35:02Z",
+  "mode": "remote",
+  "scanner": "content-verification",
+  "targets": [
+    "http://127.0.0.1:34931/exposed"
+  ],
+  "scope": "Small metadata requests only; redirects not followed",
+  "secret_values_redacted": true,
+  "summary": {
+    "exposures": 3,
+    "secret_findings": 0,
+    "warnings": 0,
+    "config_history": 0,
+    "unmerged_refs": 0
+  },
+  "findings": [
+    {
+      "module": "remote_metadata",
+      "target": "http://127.0.0.1:34931/exposed",
+      "path": "/.git/HEAD",
+      "http_status": "200",
+      "head_status": "200",
+      "severity": "FAIL",
+      "state": "EXPOSED",
+      "verified": true,
+      "detail": "Publicly readable, content-verified VCS metadata"
+    },
+    {
+      "module": "remote_metadata",
+      "target": "http://127.0.0.1:34931/exposed",
+      "path": "/.git/config",
+      "http_status": "200",
+      "head_status": "200",
+      "severity": "FAIL",
+      "state": "EXPOSED",
+      "verified": true,
+      "detail": "Publicly readable, content-verified VCS metadata"
+    },
+    {
+      "module": "remote_metadata",
+      "target": "http://127.0.0.1:34931/exposed",
+      "path": "/.gitignore",
+      "http_status": "200",
+      "head_status": "200",
+      "severity": "INFO",
+      "state": "PUBLIC_IGNORE_FILE",
+      "verified": false,
+      "detail": "Non-HTML ignore-like text reachable; not proof of an exposed repository"
+    },
+    {
+      "module": "remote_metadata",
+      "target": "http://127.0.0.1:34931/exposed",
+      "path": "/.svn/entries",
+      "http_status": "200",
+      "head_status": "200",
+      "severity": "FAIL",
+      "state": "EXPOSED",
+      "verified": true,
+      "detail": "Publicly readable, content-verified VCS metadata"
+    }
+  ],
+  "verdict": "EXPOSED"
+}

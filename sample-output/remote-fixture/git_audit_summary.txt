@@ -1,0 +1,14 @@
+RepoGuard v1.0.0 — remote audit
+Generated: 2026-10-17T11:35:02Z
+Verdict: EXPOSED
+Scanner: content-verification
+Scope: Small metadata requests only; redirects not followed
+Secret values: omitted
+
+Exposures: 3 | Secret findings: 0 | Coverage/review warnings: 0
+Configuration history: 0 | Unmerged refs: 0
+
+[FAIL] remote_metadata / EXPOSED  http://127.0.0.1:34931/exposed/.git/HEAD    Publicly readable, content-verified VCS metadata
+[FAIL] remote_metadata / EXPOSED  http://127.0.0.1:34931/exposed/.git/config    Publicly readable, content-verified VCS metadata
+[INFO] remote_metadata / PUBLIC_IGNORE_FILE  http://127.0.0.1:34931/exposed/.gitignore    Non-HTML ignore-like text reachable; not proof of an exposed repository
+[FAIL] remote_metadata / EXPOSED  http://127.0.0.1:34931/exposed/.svn/entries    Publicly readable, content-verified VCS metadata

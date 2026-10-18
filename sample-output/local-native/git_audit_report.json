@@ -1,0 +1,148 @@
+{
+  "tool": "RepoGuard",
+  "version": "1.0.0",
+  "generated_at": "2026-10-17T11:35:01Z",
+  "mode": "local",
+  "scanner": "native",
+  "targets": [
+    "/tmp/repoguard-tests.1emd6b1i/repo"
+  ],
+  "scope": "Locally reachable commit diffs and refs; no network, no working-tree/index scan",
+  "secret_values_redacted": true,
+  "summary": {
+    "exposures": 0,
+    "secret_findings": 6,
+    "warnings": 0,
+    "config_history": 3,
+    "unmerged_refs": 1
+  },
+  "findings": [
+    {
+      "module": "authors",
+      "severity": "INFO",
+      "state": "AUTHOR_DOMAIN",
+      "domain": "internal.example",
+      "detail": "Observed author email domain; internal/public status not inferred"
+    },
+    {
+      "module": "branches",
+      "severity": "INFO",
+      "state": "UNMERGED_REF",
+      "ref": "refs/heads/feature/unmerged",
+      "base": "HEAD",
+      "detail": "Not fully reachable from comparison base; may be stale cached remote ref"
+    },
+    {
+      "module": "history",
+      "severity": "WARN",
+      "state": "SECRET",
+      "rule": "credential-assignment",
+      "commit": "a9a80bc6b036e5f93614cad130d0cb26708fc40a",
+      "file": ".env",
+      "line": 1,
+      "scanner": "native",
+      "detail": "Value omitted; review locally"
+    },
+    {
+      "module": "history",
+      "severity": "WARN",
+      "state": "SECRET",
+      "rule": "credential-assignment",
+      "commit": "b0a4df8d6a7771b347d8dc2029b7776e394119c4",
+      "file": ".env",
+      "line": 1,
+      "scanner": "native",
+      "detail": "Value omitted; review locally"
+    },
+    {
+      "module": "history",
+      "severity": "WARN",
+      "state": "SECRET",
+      "rule": "database-credential-uri",
+      "commit": "a9a80bc6b036e5f93614cad130d0cb26708fc40a",
+      "file": ".env",
+      "line": 2,
+      "scanner": "native",
+      "detail": "Value omitted; review locally"
+    },
+    {
+      "module": "history",
+      "severity": "WARN",
+      "state": "SECRET",
+      "rule": "database-credential-uri",
+      "commit": "b0a4df8d6a7771b347d8dc2029b7776e394119c4",
+      "file": ".env",
+      "line": 2,
+      "scanner": "native",
+      "detail": "Value omitted; review locally"
+    },
+    {
+      "module": "history",
+      "severity": "INFO",
+      "state": "CONFIG_HISTORY",
+      "rule": "env-file-history",
+      "commit": "a9a80bc6b036e5f93614cad130d0cb26708fc40a",
+      "file": ".env",
+      "line": 0,
+      "scanner": "native",
+      "detail": "Value omitted; review locally"
+    },
+    {
+      "module": "history",
+      "severity": "INFO",
+      "state": "CONFIG_HISTORY",
+      "rule": "env-file-history",
+      "commit": "b0a4df8d6a7771b347d8dc2029b7776e394119c4",
+      "file": ".env",
+      "line": 0,
+      "scanner": "native",
+      "detail": "Value omitted; review locally"
+    },
+    {
+      "module": "history",
+      "severity": "WARN",
+      "state": "SECRET",
+      "rule": "private-key",
+      "commit": "a9a80bc6b036e5f93614cad130d0cb26708fc40a",
+      "file": "id_key",
+      "line": 1,
+      "scanner": "native",
+      "detail": "Value omitted; review locally"
+    },
+    {
+      "module": "history",
+      "severity": "WARN",
+      "state": "SECRET",
+      "rule": "private-key",
+      "commit": "b0a4df8d6a7771b347d8dc2029b7776e394119c4",
+      "file": "id_key",
+      "line": 1,
+      "scanner": "native",
+      "detail": "Value omitted; review locally"
+    },
+    {
+      "module": "history",
+      "severity": "INFO",
+      "state": "CONFIG_HISTORY",
+      "rule": "staging-config-history",
+      "commit": "b0a4df8d6a7771b347d8dc2029b7776e394119c4",
+      "file": "staging.yaml",
+      "line": 0,
+      "scanner": "native",
+      "detail": "Value omitted; review locally"
+    },
+    {
+      "module": "local_coverage",
+      "severity": "INFO",
+      "state": "COVERAGE",
+      "detail": "4 reachable commit(s); all local refs, including locally cached remote refs. Reflog-only and unreachable objects excluded."
+    },
+    {
+      "module": "local_coverage",
+      "severity": "INFO",
+      "state": "LIMITED_SCANNER",
+      "detail": "Native heuristic scanner selected; no exhaustive secret-detection guarantee"
+    }
+  ],
+  "verdict": "SECRETS_FOUND"
+}
